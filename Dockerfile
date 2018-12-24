@@ -4,9 +4,11 @@ RUN pip install imageio
 RUN python -c "import imageio; imageio.plugins.ffmpeg.download()"
 
 FROM bethgelab/deeplearning:cuda9.0-cudnn7
+
+SHELL ["/bin/bash", "-c"]
 RUN apt-get update
 RUN apt-get -y install ffmpeg
-RUN apt-get -y openssh-server openssh-client
+RUN apt-get -y install openssh-server openssh-client
 
 RUN pip install --upgrade pip
 
