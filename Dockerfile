@@ -20,3 +20,5 @@ RUN pip install ipywidgets
 RUN pip3 install ipywidgets
 
 RUN pip3 install seaborn
+
+ENV DLClight=True
